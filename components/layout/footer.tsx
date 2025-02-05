@@ -49,21 +49,17 @@ export default function Footer() {
         </Link>
       </div>
       <div>
-        <Button
-          onClick={toggleDarkMode}
-          className="group relative flex items-center justify-start overflow-hidden w-full hover:w-40 size-10 rounded-md dark:border-white border-black border transition-all duration-300 ease-in-out"
-        >
-          <div className="flex items-center justify-start gap-4 transform transition-all duration-300">
-            {darkMode ? (
-              <Sun className="text-black" />
-            ) : (
-              <Moon className="text-white" />
-            )}
-            <span className="opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-sm whitespace-nowrap">
-              {darkMode ? "Set to Light Mode" : "Set to Dark Mode"}
-            </span>
-          </div>
-        </Button>
+        {darkMode ? (
+          <Sun
+            onClick={toggleDarkMode}
+            className="text-white size-8 sm:size-10 hover:cursor-pointer"
+          />
+        ) : (
+          <Moon
+            onClick={toggleDarkMode}
+            className="text-black size-8 sm:size-10 hover:cursor-pointer"
+          />
+        )}
       </div>
     </div>
   );

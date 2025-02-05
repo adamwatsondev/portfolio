@@ -33,7 +33,7 @@ export default function About() {
         </span>
         <span className="md:text-4xl text-lg font-old-standard font-bold leading-tight dark:invert">
           I’m currently open to new opportunities where I can contribute my
-          skills and grow professionally. Feel free to connect with me!
+          skills and grow professionally.
         </span>
       </motion.div>
     </div>
