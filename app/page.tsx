@@ -680,6 +680,24 @@ export default function Home() {
               Azure
             </span>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/tableau.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full dark:invert"
+            />
+            <span className="text-center text-md sm:text-xl dark:invert">
+              Tableau
+            </span>
+          </motion.div>
         </div>
       </div>
     </div>
