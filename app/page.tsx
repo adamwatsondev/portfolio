@@ -2,33 +2,190 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col gap-20">
       {/* Intro */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
-        className="h-screen justify-center sm:h-screen flex flex-col gap-4 items-start"
+        className="grid grid-cols-1 sm:grid-cols-2 items-center justify-between min-h-screen gap-8 px-4"
       >
-        <span className="md:text-8xl text-3xl font-old-standard font-bold leading-tight dark:invert">
-          Adam Watson
-        </span>
-        <span className="md:text-2xl text-lg font-old-standard font-bold leading-tight dark:invert">
-          Full Stack Web Developer based in Brighton, UK
-        </span>
+        <div className="flex flex-col items-center sm:items-start gap-4">
+          <span className="md:text-8xl text-3xl font-bold leading-tight dark:invert text-left">
+            Adam Watson
+          </span>
+          <span className="md:text-2xl text-lg font-bold leading-tight dark:invert text-left">
+            Full Stack Web Developer based in Brighton, UK
+          </span>
+        </div>
+
+        <div className="flex flex-col items-center sm:items-end gap-4">
+          <a href="/docs/adam_watson_cv.pdf" download="adam_watson_cv.pdf">
+            <Button className="bg-black w-60 h-14 text-white" variant="default">
+              <span className="text-white dark:invert">Download my CV</span>
+            </Button>
+          </a>
+          <Link href="/contact">
+            <Button className="bg-black w-60 h-14 text-white" variant="default">
+              <span className="text-white dark:invert">Contact Me</span>
+            </Button>
+          </Link>
+        </div>
       </motion.div>
-      {/* Skills */}
-      <div className="flex flex-col gap-20 justify-between">
+
+      {/* Work Experience */}
+      <div className="flex flex-col gap-20">
         <motion.span
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="md:text-5xl text-3xl font-old-standard font-bold leading-tight dark:invert"
+          className="md:text-5xl text-3xl font-bold leading-tight dark:invert"
+        >
+          Experience
+        </motion.span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {/* Web Developer & Data Engineer */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-start gap-4"
+          >
+            <span className="md:text-4xl text-3xl font-bold leading-tight dark:invert text-left">
+              Web Developer & Data Engineer
+            </span>
+            <span className="md:text-2xl text-xl leading-tight dark:invert text-left">
+              Forloop Consulting, Brighton, UK
+            </span>
+            <span className="md:text-md text-md leading-tight dark:invert text-left">
+              July 2023 – August 2024
+            </span>
+
+            <ul className="list-disc pl-5 text-left dark:invert">
+              <li>
+                Built a full-stack, consumer-facing application using TypeScript
+                and SQL to provide actionable data insights and performance
+                analytics. This solution enabled detailed analysis of customer
+                engagement, boosted marketing opt-in rates, and delivered
+                demographic insights to drive data-informed decisions.
+              </li>
+              <li>
+                Delivered two key front-end projects, including a complete
+                redesign of a title search tool to improve functionality and
+                user experience, as well as leading a visual overhaul of a
+                proprietary tool that displays information on rights, licenses,
+                nationalities, and revenue splits in the film and TV industry,
+                enhancing data accessibility and usability.
+              </li>
+              <li>
+                Designed and deployed an educational marketplace application,
+                utilizing React, Recharts, and Radix UI for enhanced data
+                visualization and user experience, with a back-end powered by
+                Prisma and raw SQL queries to optimize data management and
+                automation.
+              </li>
+              <li>
+                Streamlined data analysis for a gambling platform by developing
+                Python scripts and SQL queries to calculate and validate KPI
+                data. Presented key insights visually using Tableau and custom
+                SQL-calculated fields for comprehensive reporting.
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Technical Consultant & .NET Developer */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-start gap-4"
+          >
+            <span className="md:text-4xl text-3xl font-bold leading-tight dark:invert text-left">
+              Technical Consultant & .NET Developer
+            </span>
+            <span className="md:text-2xl text-xl leading-tight dark:invert text-left">
+              The Software Institute / NETBuilder, Brighton, UK
+            </span>
+            <span className="md:text-md text-md leading-tight dark:invert text-left">
+              July 2022 – September 2022
+            </span>
+
+            <ul className="list-disc pl-5 text-left dark:invert">
+              <li>
+                Enhanced technical skills in C#, SQL, Java, and C++ through a
+                hands-on training program, applying these skills to develop
+                client-oriented software solutions.
+              </li>
+              <li>
+                Worked alongside a cross-functional team to transform client
+                requirements into customized software solutions, improving
+                problem-solving abilities, time management, and communication in
+                a fast-paced environment.
+              </li>
+              <li>
+                Gained valuable experience throughout full project lifecycles,
+                from gathering client specifications to implementing solutions,
+                refining abilities in coding, testing, and troubleshooting.
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* IT Support Engineer Helpdesk */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-start gap-4"
+          >
+            <span className="md:text-4xl text-3xl font-bold leading-tight dark:invert text-left">
+              IT Support Engineer Helpdesk
+            </span>
+            <span className="md:text-2xl text-xl leading-tight dark:invert text-left">
+              Netsense, Burgess Hill, UK
+            </span>
+            <span className="md:text-md text-md leading-tight dark:invert text-left">
+              May 2023 – July 2023
+            </span>
+
+            <ul className="list-disc pl-5 text-left dark:invert">
+              <li>
+                Provided technical support by managing client service requests
+                for software and hardware issues, ensuring clear communication
+                and timely resolution.
+              </li>
+              <li>
+                Proactively monitored applications to identify and address
+                potential issues, preventing disruptions such as VPN or server
+                failures and maintaining seamless operations.
+              </li>
+              <li>
+                Utilized Azure for system administration, along with remote
+                desktop software and automation tools, to efficiently resolve
+                client issues and manage service requests.
+              </li>
+            </ul>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Skills */}
+      <div className="flex flex-col gap-20">
+        <motion.span
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="md:text-5xl text-3xl font-bold leading-tight dark:invert"
         >
           Skills
         </motion.span>
@@ -525,6 +682,6 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
