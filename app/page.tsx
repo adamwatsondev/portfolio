@@ -1,101 +1,330 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="grid grid-cols-3 gap-40">
+      <div className="col-span-3 flex flex-col gap-4 items-start">
+        <span className="md:text-6xl text-3xl font-old-standard font-bold leading-tight dark:invert">
+          Hi, I&apos;m Adam Watson
+        </span>
+        <span className="md:text-2xl text-lg font-old-standard font-bold leading-tight dark:invert">
+          A Full Stack Developer based in Brighton, UK
+        </span>
+      </div>
+      <div className="col-span-3 flex flex-col gap-8 justify-between">
+        <span className="md:text-5xl text-lg font-old-standard font-bold leading-tight dark:invert">
+          Skills
+        </span>
+        {/* Frontend */}
+        <div className="flex flex-col gap-4">
+          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+            Frontend
+          </span>
+          <div className="flex justify-start gap-4">
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/html.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                HTML
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/css.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                CSS
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/javascript.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                JavaScript
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/typescript.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                TypeScript
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/next.svg"
+                className="dark:invert"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                NextJS
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/react.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                React
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/tailwind.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Tailwind
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/vite.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Vite
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/playwright.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Playwright
+              </span>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* Backend */}
+        <div className="flex flex-col gap-4">
+          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+            Backend
+          </span>
+          <div className="flex justify-start gap-4">
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/node.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                NodeJS
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/python.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Pyhton
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/dbeaver.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                DBeaver
+              </span>
+            </div>
+          </div>
+          {/* Frontend */}
+        </div>
+        {/* Databasing */}
+        <div className="flex flex-col gap-4">
+          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+            Databasing
+          </span>
+          <div className="flex justify-start gap-4">
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/postgresql.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                PostgreSQL
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/mysql.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                MySQL
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/firebase.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Firebase
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/prisma.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Prisma
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* Ops */}
+        <div className="flex flex-col gap-4">
+          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+            Ops
+          </span>
+          <div className="flex justify-start gap-4">
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/vercel-icon.svg"
+                className="dark:invert"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Vercel
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/cloudflare.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Cloudflare
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/aws.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                AWS
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/git.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Git
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* Tools */}
+        <div className="flex flex-col gap-4">
+          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+            Tools
+          </span>
+          <div className="flex justify-start gap-4">
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/figma.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Figma
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/jira.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Jira
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/trello.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Trello
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/skills/azure.svg"
+                alt="Adam Watson"
+                width={150}
+                height={150}
+              />
+              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+                Azure
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
