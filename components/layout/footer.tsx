@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { GithubIcon, LinkedinIcon, Mail, Moon, Sun } from "lucide-react";
-import { Button } from "../ui/button";
 
 export default function Footer() {
   const [darkMode, setDarkMode] = useState(false);
