@@ -16,7 +16,7 @@ export default function Home() {
         viewport={{ once: true }}
         className="grid grid-cols-1 sm:grid-cols-2 items-center justify-between min-h-screen gap-8 px-4"
       >
-        <div className="flex flex-col items-center sm:items-start gap-4">
+        <div className="flex flex-col items-start gap-4">
           <span className="md:text-8xl text-3xl font-bold leading-tight dark:invert text-left">
             Adam Watson
           </span>
