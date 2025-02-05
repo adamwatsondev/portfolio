@@ -1,330 +1,530 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-3 gap-40">
-      <div className="col-span-3 flex flex-col gap-4 items-start">
+    <>
+      {/* Intro */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+        className="h-screen justify-center sm:h-screen flex flex-col gap-4 items-start"
+      >
         <span className="md:text-6xl text-3xl font-old-standard font-bold leading-tight dark:invert">
-          Hi, I&apos;m Adam Watson
+          Adam Watson
         </span>
-        <span className="md:text-2xl text-lg font-old-standard font-bold leading-tight dark:invert">
-          A Full Stack Developer based in Brighton, UK
+        <span className="md:text-xl text-lg font-old-standard font-bold leading-tight dark:invert">
+          Full Stack Web Developer based in Brighton, UK
         </span>
-      </div>
-      <div className="col-span-3 flex flex-col gap-8 justify-between">
-        <span className="md:text-5xl text-lg font-old-standard font-bold leading-tight dark:invert">
+      </motion.div>
+      {/* Skills */}
+      <div className="flex flex-col gap-8 justify-between">
+        <motion.span
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="md:text-5xl text-lg font-old-standard font-bold leading-tight dark:invert"
+        >
           Skills
-        </span>
+        </motion.span>
         {/* Frontend */}
-        <div className="flex flex-col gap-4">
-          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+        <div className="grid grid-cols-3 gap-8">
+          <motion.span
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="md:text-3xl col-span-3 text-md dark:invert"
+          >
             Frontend
-          </span>
-          <div className="flex justify-start gap-4">
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/html.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                HTML
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/css.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                CSS
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/javascript.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                JavaScript
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/typescript.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                TypeScript
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/next.svg"
-                className="dark:invert"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                NextJS
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/react.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                React
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/tailwind.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Tailwind
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/vite.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Vite
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/playwright.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Playwright
-              </span>
-            </div>
-          </div>
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/javascript.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              JavaScript
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/typescript.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              TypeScript
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/react.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              React
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/html.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              HTML
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/css.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              CSS
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/next.svg"
+              className="dark:invert h-full"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              NextJS
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/tailwind.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Tailwind
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/vite.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Vite
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/playwright.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Playwright
+            </span>
+          </motion.div>
         </div>
         {/* Backend */}
-        <div className="flex flex-col gap-4">
-          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+        <div className="grid grid-cols-3 gap-8">
+          <motion.span
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="md:text-3xl col-span-3 text-md dark:invert"
+          >
             Backend
-          </span>
-          <div className="flex justify-start gap-4">
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/node.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                NodeJS
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/python.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Pyhton
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/dbeaver.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                DBeaver
-              </span>
-            </div>
-          </div>
-          {/* Frontend */}
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/node.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              NodeJS
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/python.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Pyhton
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/dbeaver.svg"
+              alt="Adam Watson"
+              className="dark:invert h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              DBeaver
+            </span>
+          </motion.div>
         </div>
         {/* Databasing */}
-        <div className="flex flex-col gap-4">
-          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+        <div className="grid grid-cols-3 gap-8">
+          <motion.span
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="md:text-3xl col-span-3 text-md dark:invert"
+          >
             Databasing
-          </span>
-          <div className="flex justify-start gap-4">
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/postgresql.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                PostgreSQL
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/mysql.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                MySQL
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/firebase.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Firebase
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/prisma.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Prisma
-              </span>
-            </div>
-          </div>
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/postgresql.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              PostgreSQL
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/mysql.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              MySQL
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/firebase.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Firebase
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/prisma.svg"
+              alt="Adam Watson"
+              className="h-full"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Prisma
+            </span>
+          </motion.div>
         </div>
         {/* Ops */}
-        <div className="flex flex-col gap-4">
-          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+        <div className="grid grid-cols-3 gap-8">
+          <motion.span
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="md:text-3xl col-span-3 text-md dark:invert"
+          >
             Ops
-          </span>
-          <div className="flex justify-start gap-4">
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/vercel-icon.svg"
-                className="dark:invert"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Vercel
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/cloudflare.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Cloudflare
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/aws.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                AWS
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/git.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Git
-              </span>
-            </div>
-          </div>
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/vercel-icon.svg"
+              className="dark:invert h-full"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Vercel
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/cloudflare.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Cloudflare
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/aws.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              AWS
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/git.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Git
+            </span>
+          </motion.div>
         </div>
         {/* Tools */}
-        <div className="flex flex-col gap-4">
-          <span className="md:text-xl text-md font-old-standard font-bold leading-tight dark:invert">
+        <div className="grid grid-cols-3 gap-8">
+          <motion.span
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="md:text-3xl col-span-3 text-md dark:invert"
+          >
             Tools
-          </span>
-          <div className="flex justify-start gap-4">
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/figma.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Figma
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/jira.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Jira
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/trello.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Trello
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/skills/azure.svg"
-                alt="Adam Watson"
-                width={150}
-                height={150}
-              />
-              <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
-                Azure
-              </span>
-            </div>
-          </div>
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/figma.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Figma
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/jira.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Jira
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/trello.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Trello
+            </span>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="col-span-1 items-center justify-self-center gap-4"
+          >
+            <Image
+              src="/skills/azure.svg"
+              alt="Adam Watson"
+              width={100}
+              height={100}
+              className="h-full"
+            />
+            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+              Azure
+            </span>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
