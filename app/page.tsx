@@ -22,13 +22,13 @@ export default function Home() {
         </span>
       </motion.div>
       {/* Skills */}
-      <div className="flex flex-col gap-8 justify-between">
+      <div className="flex flex-col gap-20 justify-between">
         <motion.span
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="md:text-5xl text-lg font-old-standard font-bold leading-tight dark:invert"
+          className="md:text-5xl text-3xl font-old-standard font-bold leading-tight dark:invert"
         >
           Skills
         </motion.span>
@@ -39,7 +39,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:text-3xl col-span-3 text-md dark:invert"
+            className="text-3xl col-span-3 text-center dark:invert"
           >
             Frontend
           </motion.span>
@@ -57,7 +57,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               JavaScript
             </span>
           </motion.div>
@@ -75,7 +75,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               TypeScript
             </span>
           </motion.div>
@@ -93,7 +93,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               React
             </span>
           </motion.div>
@@ -111,7 +111,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               HTML
             </span>
           </motion.div>
@@ -129,7 +129,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               CSS
             </span>
           </motion.div>
@@ -147,7 +147,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               NextJS
             </span>
           </motion.div>
@@ -165,7 +165,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Tailwind
             </span>
           </motion.div>
@@ -183,7 +183,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Vite
             </span>
           </motion.div>
@@ -201,7 +201,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Playwright
             </span>
           </motion.div>
@@ -213,7 +213,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:text-3xl col-span-3 text-md dark:invert"
+            className="text-3xl col-span-3 text-center dark:invert"
           >
             Backend
           </motion.span>
@@ -231,7 +231,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               NodeJS
             </span>
           </motion.div>
@@ -249,7 +249,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Pyhton
             </span>
           </motion.div>
@@ -267,7 +267,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               DBeaver
             </span>
           </motion.div>
@@ -279,7 +279,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:text-3xl col-span-3 text-md dark:invert"
+            className="text-3xl col-span-3 text-center dark:invert"
           >
             Databasing
           </motion.span>
@@ -297,7 +297,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               PostgreSQL
             </span>
           </motion.div>
@@ -315,7 +315,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               MySQL
             </span>
           </motion.div>
@@ -333,7 +333,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Firebase
             </span>
           </motion.div>
@@ -351,7 +351,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Prisma
             </span>
           </motion.div>
@@ -363,7 +363,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:text-3xl col-span-3 text-md dark:invert"
+            className="text-3xl col-span-3 text-center dark:invert"
           >
             Ops
           </motion.span>
@@ -381,7 +381,7 @@ export default function Home() {
               width={100}
               height={100}
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Vercel
             </span>
           </motion.div>
@@ -399,7 +399,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Cloudflare
             </span>
           </motion.div>
@@ -417,7 +417,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               AWS
             </span>
           </motion.div>
@@ -435,7 +435,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Git
             </span>
           </motion.div>
@@ -447,7 +447,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:text-3xl col-span-3 text-md dark:invert"
+            className="text-3xl col-span-3 text-center dark:invert"
           >
             Tools
           </motion.span>
@@ -465,7 +465,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Figma
             </span>
           </motion.div>
@@ -483,7 +483,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Jira
             </span>
           </motion.div>
@@ -501,7 +501,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Trello
             </span>
           </motion.div>
@@ -519,7 +519,7 @@ export default function Home() {
               height={100}
               className="h-full"
             />
-            <span className="text-center text-lg font-old-standard font-bold leading-tight dark:invert">
+            <span className="text-center text-md sm:text-xl dark:invert">
               Azure
             </span>
           </motion.div>

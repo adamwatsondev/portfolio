@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="fixed top-0 left-0 w-full z-10 h-24">
           <Header />
         </div>
-        <div className="lg:px-40 px-8 pb-20">{children}</div>
+        <div className="lg:px-40 px-8 pb-40">{children}</div>
         <div className="fixed bottom-0 left-0 w-full h-12 sm:h-20 flex items-center justify-center">
           <Footer />
         </div>
