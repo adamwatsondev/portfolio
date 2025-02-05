@@ -14,10 +14,10 @@ export default function Home() {
         viewport={{ once: true }}
         className="h-screen justify-center sm:h-screen flex flex-col gap-4 items-start"
       >
-        <span className="md:text-6xl text-3xl font-old-standard font-bold leading-tight dark:invert">
+        <span className="md:text-8xl text-3xl font-old-standard font-bold leading-tight dark:invert">
           Adam Watson
         </span>
-        <span className="md:text-xl text-lg font-old-standard font-bold leading-tight dark:invert">
+        <span className="md:text-2xl text-lg font-old-standard font-bold leading-tight dark:invert">
           Full Stack Web Developer based in Brighton, UK
         </span>
       </motion.div>

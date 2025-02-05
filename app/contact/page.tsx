@@ -61,6 +61,7 @@ export default function Contact() {
         toast.error("An error occurred while sending the message.");
       });
   };
+
   return (
     <div className="grid grid-cols-2 gap-12 px-4 md:px-10 lg:px-20 pb-20 mt-40">
       <motion.div
@@ -74,8 +75,8 @@ export default function Contact() {
           Get in touch
         </span>
         <span className="md:text-2xl text-lg font-old-standard font-bold leading-tight dark:invert">
-          Whether you have a question, a project in mind, I’d love to hear from
-          you. Send me a message, and I’ll get back to you soon!
+          If you have any questions or would like to discuss a project, feel
+          free to reach out. I will respond as soon as possible.
         </span>
       </motion.div>
       <motion.div
