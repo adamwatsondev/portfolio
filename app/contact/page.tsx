@@ -63,11 +63,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-12 px-4 md:px-10 lg:px-20 pb-20 mt-40">
+    <div className="grid grid-cols-2 gap-12 px-4 md:px-10 lg:px-20 pb-20 mt-28 sm:mt-40">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "backOut" }}
+        transition={{ duration: 3, ease: "backOut" }}
         viewport={{ once: true }}
         className="sm:col-span-1 col-span-2 items-start justify-center flex flex-col gap-4 md:gap-12"
       >
@@ -82,7 +82,7 @@ export default function Contact() {
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "backOut" }}
+        transition={{ duration: 3, ease: "backOut" }}
         viewport={{ once: true }}
         className="sm:col-span-1 col-span-2 items-center flex flex-col gap-12"
       >
