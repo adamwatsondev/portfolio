@@ -19,13 +19,11 @@ export default function RootLayout({
       <body
         className={`${fjallaOne.className} dark:bg-black bg-transparent antialiased`}
       >
-        <div className="fixed top-0 left-0 w-full z-10 h-20">
+        <div className="fixed top-0 left-0 w-full z-10 h-24">
           <Header />
         </div>
-
-        <div className="lg:px-40 px-8 pb-20 mt-40 sm:mt-60">{children}</div>
-
-        <div className="fixed bottom-0 left-0 w-full sm:h-12 h-10 flex items-center justify-center">
+        <div className="lg:px-40 px-8 pb-20">{children}</div>
+        <div className="fixed bottom-0 left-0 w-full h-12 sm:h-20 flex items-center justify-center">
           <Footer />
         </div>
       </body>

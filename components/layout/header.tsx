@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <div className="flex w-full justify-between sm:px-32 h-20 pt-2 sm:pt-0 items-center sm:items-center bg-white dark:bg-black relative">
+    <div className="flex w-full justify-between sm:px-32 h-24 pt-2 sm:pt-0 items-start sm:items-center bg-white dark:bg-black relative">
       <div className="hidden md:block items-start space-x-4">
         <div className="col-span-3 text-start flex dark:dark:invert text-black">
           <span
@@ -27,12 +27,21 @@ export default function Header() {
         </div>
       </div>
       <div className="sm:hidden flex w-full justify-center items-center relative">
-        <Button onClick={toggleMenu} className="bg-white">
-          {isMenuOpen ? (
-            <X className="w-6 h-6 transition-all bg-transparent duration-500 ease-in-out" />
-          ) : (
-            <Menu className="w-6 h-6 mt-5 transition-all duration-500 ease-in-out" />
-          )}
+        <Button
+          variant="ghost"
+          onClick={toggleMenu}
+          className="relative w-10 h-10"
+        >
+          <X
+            className={`absolute w-4 h-4 transition-all text-black dark:text-white duration-500 ease-in-out ${
+              isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
+          />
+          <Menu
+            className={`absolute w-4 h-4 mt-5 transition-all text-black dark:text-white duration-500 ease-in-out ${
+              isMenuOpen ? "opacity-0 scale-90" : "opacity-100 scale-100"
+            }`}
+          />
         </Button>
 
         {/* Navigation Menu (mobile) */}
@@ -57,6 +66,12 @@ export default function Header() {
               About_
             </Link>
             <Link
+              href="/projects"
+              className="dark:invert text-black font-old-standard font-bold hover:text-gray-400"
+            >
+              Projects_
+            </Link>
+            <Link
               href="/contact"
               className="dark:invert text-black font-old-standard font-bold hover:text-gray-400"
             >
@@ -79,6 +94,12 @@ export default function Header() {
           className="dark:invert text-black font-old-standard font-bold hover:text-gray-400 text-2xl"
         >
           About_
+        </Link>
+        <Link
+          href="/projects"
+          className="dark:invert text-black font-old-standard font-bold hover:text-gray-400 text-2xl"
+        >
+          Projects_
         </Link>
         <Link
           href="/contact"

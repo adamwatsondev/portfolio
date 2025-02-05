@@ -17,6 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "sonner";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const schema = z.object({
   name: z.string().regex(/^[a-zA-Z-]+$/, "Only letters and hyphen allowed."),
@@ -61,8 +62,14 @@ export default function Contact() {
       });
   };
   return (
-    <div className="grid grid-cols-2 gap-12 px-4 md:px-10 lg:px-20 pb-20 mt-28 sm:mt-40">
-      <div className="sm:col-span-1 col-span-2 items-start justify-center flex flex-col gap-4 md:gap-12">
+    <div className="grid grid-cols-2 gap-12 px-4 md:px-10 lg:px-20 pb-20 mt-40">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "backOut" }}
+        viewport={{ once: true }}
+        className="sm:col-span-1 col-span-2 items-start justify-center flex flex-col gap-4 md:gap-12"
+      >
         <span className="md:text-6xl text-3xl font-old-standard font-bold leading-tight dark:invert">
           Get in touch
         </span>
@@ -70,8 +77,14 @@ export default function Contact() {
           Whether you have a question, a project in mind, I’d love to hear from
           you. Send me a message, and I’ll get back to you soon!
         </span>
-      </div>
-      <div className="sm:col-span-1 col-span-2 items-center flex flex-col gap-12">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "backOut" }}
+        viewport={{ once: true }}
+        className="sm:col-span-1 col-span-2 items-center flex flex-col gap-12"
+      >
         <Card className="w-full border-black dark:border-white max-w-lg h-full">
           <CardContent className="flex pt-8 justify-center">
             <Form {...form}>
@@ -157,7 +170,7 @@ export default function Contact() {
             </Form>
           </CardContent>
         </Card>
-      </div>
+      </motion.div>
       <Toaster position="bottom-right" />
     </div>
   );
