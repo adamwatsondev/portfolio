@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center sm:items-end gap-4">
-          <a href="/docs/adam_watson_cv.pdf" download="adam_watson_cv.pdf">
+          <a href="/docs/adam_watson_2025_cv.pdf" download="adam_watson_cv.pdf">
             <Button className="bg-black w-60 h-14 text-white" variant="default">
               <span className="text-white dark:invert">Download my CV</span>
             </Button>
