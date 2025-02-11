@@ -40,7 +40,7 @@ export default function Home() {
       </motion.div>
 
       {/* Work Experience */}
-      <div className="flex flex-col gap-20">
+      <div id="experience" className="flex flex-col gap-20">
         <motion.span
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +179,7 @@ export default function Home() {
       </div>
 
       {/* Skills */}
-      <div className="flex flex-col gap-20">
+      <div id="skills" className="flex flex-col gap-20">
         <motion.span
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -696,6 +696,48 @@ export default function Home() {
             />
             <span className="text-center text-md sm:text-xl dark:invert">
               Tableau
+            </span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div id="testimonials" className="grid grid-cols-4 gap-20">
+        <motion.span
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="md:text-5xl col-span-4 text-3xl font-bold leading-tight dark:invert"
+        >
+          Testimonials
+        </motion.span>
+        <div className="flex flex-col col-start-1 col-span-4 sm:col-start-2 sm:col-span-2 items-center justify-center gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-start gap-4"
+          >
+            <span className="md:text-4xl text-3xl font-bold leading-tight dark:invert text-left">
+              Paul Cahill
+            </span>
+            <span className="md:text-2xl text-lg dark:invert text-left">
+              &quot;I recently asked Adam Watson about developing a website for
+              my photography business, and after an initial conversation in
+              which I outlined my ideas for the site, I decided he had an
+              understanding of what I was looking for, and was happy for him to
+              proceed with the work. Working with Adam on my website turned out
+              to be a very fruitful experience, and also educational for me. He
+              took the time to understand exactly what I wanted and translated
+              my requirements into a sleek responsive and well-structured site.
+              His attention to detail, technical expertise, and ability to
+              communicate throughout the process made everything seamless.
+              <br />
+              I&apos;m very happy with the final result and would highly
+              recommend Adam to anyone looking for a skilled and reliable
+              developer.&quot;
             </span>
           </motion.div>
         </div>

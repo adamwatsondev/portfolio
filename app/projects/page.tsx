@@ -42,7 +42,8 @@ const portfolioPhotos = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-0">
+    <div className="flex flex-col gap-0 px-4">
+      {/* Paul Cahill Photography */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -50,6 +51,45 @@ export default function Projects() {
         viewport={{ once: true }}
         className="grid grid-cols-2 rounded-md border-black dark:border-white gap-12 2xl:gap-40 items-center justify-center mx-4 xl:mx-40 sm:mx-20 mt-28 sm:mt-40"
       >
+        <div className="xl:col-span-1 col-span-2 flex flex-col gap-8">
+          <div className="flex flex-col items-start gap-2">
+            <Link href="https://www.paulcahillphotography.co.uk/">
+              <span className="md:text-4xl underline hover:cursor-pointer text-3xl font-bold dark:invert text-left">
+                Paul Cahill Photography
+              </span>
+            </Link>
+            <span className="md:text-2xl text-lg dark:invert text-left">
+              A portfolio e-commerce website for a photographer
+            </span>
+          </div>
+          <span className="md:text-lg text-sm dark:invert text-left">
+            Paul needed a platform where people could view and purchase his
+            stunning photography without the ongoing costs of website-building
+            services. Using React, Next.js, Cloudinary, Stripe, and EmailJS, I
+            developed a sleek, responsive, and high-performance website that
+            offers a seamless user experience. Paul can also easily manage and
+            update the site&apos;s photos and text, ensuring his portfolio stays
+            fresh and up to date! This project was a great opportunity to blend
+            performance, aesthetics, and e-commerce functionality into a single
+            platform.
+          </span>
+          <div className="flex gap-4">
+            <Link
+              href="https://github.com/adamwatsondev/paulcahillphotographynext"
+              className="focus:outline-none"
+              target="_blank"
+            >
+              <GithubIcon className="text-black size-8 sm:size-16 dark:invert" />
+            </Link>
+            <Link
+              href="https://www.paulcahillphotography.co.uk/"
+              className="focus:outline-none"
+              target="_blank"
+            >
+              <Link2 className="text-black size-8 sm:size-16 dark:invert" />
+            </Link>
+          </div>
+        </div>
         <div className="xl:col-span-1 col-span-2 w-full aspect-[3/2]">
           <Carousel className="w-full">
             <CarouselContent>
@@ -71,44 +111,8 @@ export default function Projects() {
             <CarouselNext />
           </Carousel>
         </div>
-        <div className="xl:col-span-1 col-span-2 flex flex-col gap-8">
-          <div className="flex flex-col items-start gap-2">
-            <Link href="https://www.paulcahillphotography.co.uk/">
-              <span className="md:text-4xl underline hover:cursor-pointer text-3xl font-bold dark:invert text-left">
-                Paul Cahill Photography
-              </span>
-            </Link>
-            <span className="md:text-2xl text-lg dark:invert text-left">
-              A portfolio e-commerce website for a photographer
-            </span>
-          </div>
-          <span className="md:text-lg text-sm dark:invert text-left">
-            A freelance project for a Brighton based photographer that wanted to
-            showcase their work, connect with potential clients and sell their
-            prints. The client was tired of website creation services constantly
-            changing and increasing in price so I was able to save them money
-            utilising Cloudinary for image hosting, Stripe for payment
-            processing due to their pay as you go model and EmailJS for easy
-            contacting.
-          </span>
-          <div className="flex gap-4">
-            <Link
-              href="https://github.com/adamwatsondev/paulcahillphotographynext"
-              className="focus:outline-none"
-              target="_blank"
-            >
-              <GithubIcon className="text-black size-8 sm:size-16 dark:invert" />
-            </Link>
-            <Link
-              href="https://www.paulcahillphotography.co.uk/"
-              className="focus:outline-none"
-              target="_blank"
-            >
-              <Link2 className="text-black size-8 sm:size-16 dark:invert" />
-            </Link>
-          </div>
-        </div>
       </motion.div>
+      {/* Portfolio */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -116,6 +120,27 @@ export default function Projects() {
         viewport={{ once: true }}
         className="grid grid-cols-2 rounded-md border-black dark:border-white gap-12 2xl:gap-40 items-center justify-center mx-4 xl:mx-40 sm:mx-20 mt-28 sm:mt-40"
       >
+        <div className="xl:col-span-1 col-span-2 w-full aspect-[3/2]">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {portfolioPhotos.map((photo, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="sm:h-[400px] rounded-md h-[200px]"
+                      width={1000}
+                      height={1000}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
         <div className="xl:col-span-1 col-span-2 flex flex-col gap-8">
           <div className="flex flex-col items-start gap-2">
             <Link href="https://www.adamwatsondev.co.uk/">
@@ -146,28 +171,54 @@ export default function Projects() {
             </Link>
           </div>
         </div>
+      </motion.div>
+      {/* Valopedia */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 3, ease: "backOut" }}
+        viewport={{ once: true }}
+        className="grid grid-cols-2 rounded-md border-black dark:border-white gap-12 2xl:gap-40 items-center justify-center mx-4 xl:mx-40 sm:mx-20 mt-28 sm:mt-40"
+      >
+        <div className="xl:col-span-1 col-span-2 flex flex-col gap-8">
+          <div className="flex flex-col items-start gap-2">
+            <span className="md:text-4xl underline hover:cursor-pointer text-3xl font-bold dark:invert text-left">
+              Valopedia
+            </span>
+            <span className="md:text-2xl text-lg dark:invert text-left">
+              A wiki style website for a the Riot Games tactical FPS game,
+              Valorant, utilising the Valorant API.
+            </span>
+          </div>
+          <span className="md:text-lg text-sm dark:invert text-left">
+            Work in progress...
+          </span>
+          <div className="flex gap-4">
+            {/* <Link
+              href="https://github.com/adamwatsondev/paulcahillphotographynext"
+              className="focus:outline-none"
+            >
+              <GithubIcon className="text-black size-8 sm:size-16 dark:invert" />
+            </Link>
+            <Link
+              href="https://github.com/adamwatsondev/paulcahillphotographynext"
+              className="focus:outline-none"
+            >
+              <Link2 className="text-black size-8 sm:size-16 dark:invert" />
+            </Link> */}
+          </div>
+        </div>
         <div className="xl:col-span-1 col-span-2 w-full aspect-[3/2]">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {portfolioPhotos.map((photo, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      className="sm:h-[400px] rounded-md h-[200px]"
-                      width={1000}
-                      height={1000}
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          <Image
+            src="/images/valopedia.png"
+            alt="Home"
+            className="sm:h-[400px] blur-sm h-[200px]"
+            width={1000}
+            height={1000}
+          />
         </div>
       </motion.div>
+      {/* Pokedex Ultimate */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -212,6 +263,7 @@ export default function Projects() {
           </div>
         </div>
       </motion.div>
+      {/* Spotify Web Player */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -257,6 +309,7 @@ export default function Projects() {
           />
         </div>
       </motion.div>
+      {/* Database Checker */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}

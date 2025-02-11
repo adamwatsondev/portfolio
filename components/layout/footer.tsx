@@ -1,20 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { GithubIcon, LinkedinIcon, Mail, Moon, Sun } from "lucide-react";
 
 export default function Footer() {
   const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Check local storage for theme preference
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    }
-  }, []);
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
@@ -29,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="flex w-full justify-center sm:justify-end gap-4 px-8 md:px-16 h-12 sm:h-20 bg-white dark:bg-black items-center">
+    <div className="flex w-full justify-center transition-colors duration-1000 ease-in-out sm:justify-end gap-4 px-8 md:px-16 h-12 sm:h-20 bg-white dark:bg-black items-center">
       <div className="flex items-center gap-4 justify-center">
         <Link href="/contact" className="focus:outline-none">
           <Mail className="text-black size-8 sm:size-10 dark:invert" />

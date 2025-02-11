@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fjallaOne.className} dark:bg-black bg-transparent antialiased`}
+        className={`${fjallaOne.className} dark:bg-black transition-colors duration-1000 ease-in-out bg-transparent antialiased`}
       >
         <div className="fixed top-0 left-0 w-full z-10 h-24">
           <Header />
