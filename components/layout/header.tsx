@@ -80,20 +80,20 @@ export default function Header() {
 
         {/* Navigation Menu (mobile) */}
         <div
-          className={`absolute top-full left-0 w-full z-10 flex justify-center transition-all duration-500 ease-in-out ${
+          className={`absolute top-full w-fit z-10 flex justify-center bg-white dark:bg-black transition-all duration-700 ease-in-out ${
             isMenuOpen
               ? "max-h-[400px] opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-5 overflow-hidden"
           }`}
         >
-          <ul className="flex border border-black rounded-md p-2 flex-col bg-slate-50 gap-3 text-center transition-all duration-500 ease-in-out">
+          <ul className="flex border border-black dark:border-white rounded-md p-2 flex-col gap-3 text-center transition-all duration-500 ease-in-out">
             <li>
               <Link
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
               >
-                Intro
+                Home
               </Link>
             </li>
             <li>
@@ -104,7 +104,7 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
                 scroll={false}
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
               >
                 Experience
               </Link>
@@ -117,7 +117,7 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
                 scroll={false}
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
               >
                 Skills
               </Link>
@@ -130,7 +130,7 @@ export default function Header() {
                   setIsMenuOpen(false); // Close menu on click
                 }}
                 scroll={false}
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
               >
                 Testimonials
               </Link>
@@ -138,7 +138,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
@@ -148,7 +148,7 @@ export default function Header() {
               <Link
                 href="/projects"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
               >
                 Projects
               </Link>
@@ -157,7 +157,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-md font-bold dark:invert hover:text-gray-400"
+                className="text-md font-bold dark:invert"
               >
                 Contact
               </Link>
