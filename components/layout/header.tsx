@@ -31,40 +31,36 @@ export default function Header() {
     event.preventDefault();
 
     if (window.location.pathname === "/") {
-      // Smooth scroll if already on home page
       document
         .getElementById(sectionId)
         ?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Navigate to home first, then scroll
       router.push(`/#${sectionId}`);
       setTimeout(() => {
         document
           .getElementById(sectionId)
           ?.scrollIntoView({ behavior: "smooth" });
-      }, 100); // Ensure page is loaded before scrolling
+      }, 100);
     }
   };
 
   return (
-    <div className="flex w-full justify-between sm:px-32 h-24 transition-colors duration-1000 ease-in-out pt-2 sm:pt-0 items-start sm:items-center bg-white dark:bg-black relative">
-      <div className="hidden md:block items-start space-x-4">
-        <div className="col-span-3 text-start flex dark:dark:invert text-black">
-          <span
-            onAnimationEnd={(e) =>
-              (e.target as HTMLElement).classList.add("done")
-            }
-            className="text-lg sm:text-2xl xl:text-3xl 2xl:text-4xl typing-container font-old-standard"
-          >
-            adamwatsondev<span className="animate-blink">_</span>
-          </span>
-        </div>
+    <div className="flex w-full justify-between sm:px-32 sm:h-20 h-12 transition-colors duration-1000 ease-in-out pt-2 sm:pt-0 sm:items-center bg-white dark:bg-black relative">
+      <div className="flex items-center pl-4 pb-2 space-x-4 text-start">
+        <span
+          onAnimationEnd={(e) =>
+            (e.target as HTMLElement).classList.add("done")
+          }
+          className="text-lg dark:invert text-black sm:text-2xl xl:text-3xl 2xl:text-4xl typing-container"
+        >
+          adamwatsondev<span className="animate-blink">_</span>
+        </span>
       </div>
-      <div className="sm:hidden flex w-full justify-center items-center relative">
+      <div className="sm:hidden flex w-full justify-end pb-1 pr-4 items-end relative">
         <Button
-          variant="ghost"
+          variant="outline"
           onClick={toggleMenu}
-          className="relative w-10 h-10"
+          className="relative bg-transparent border-0 w-10 h-10"
         >
           <X
             className={`absolute w-4 h-4 transition-all text-black dark:text-white duration-500 ease-in-out ${
@@ -72,7 +68,7 @@ export default function Header() {
             }`}
           />
           <Menu
-            className={`absolute w-4 h-4 mt-5 transition-all text-black dark:text-white duration-500 ease-in-out ${
+            className={`absolute w-4 h-4 transition-all text-black dark:text-white duration-500 ease-in-out ${
               isMenuOpen ? "opacity-0 scale-90" : "opacity-100 scale-100"
             }`}
           />
@@ -80,13 +76,13 @@ export default function Header() {
 
         {/* Navigation Menu (mobile) */}
         <div
-          className={`absolute top-full w-fit z-10 flex justify-center bg-white dark:bg-black transition-all duration-700 ease-in-out ${
+          className={`absolute top-full w-fit z-10 flex justify-end bg-white dark:bg-black transition-all duration-700 ease-in-out ${
             isMenuOpen
               ? "max-h-[400px] opacity-100 translate-y-0"
               : "max-h-0 opacity-0 -translate-y-5 overflow-hidden"
           }`}
         >
-          <ul className="flex border border-black dark:border-white rounded-md p-2 flex-col gap-3 text-center transition-all duration-500 ease-in-out">
+          <ul className="flex border border-black dark:border-white rounded-md p-2 flex-col gap-3 text-end transition-all duration-500 ease-in-out">
             <li>
               <Link
                 href="/"
