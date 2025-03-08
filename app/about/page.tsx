@@ -32,8 +32,7 @@ export default function About() {
           expertise and continue learning.
         </span>
         <span className="md:text-4xl text-lg font-old-standard font-bold leading-tight dark:invert">
-          I’m currently open to new opportunities where I can contribute my
-          skills and grow professionally.
+          I’m currently a Junior Software Engineer at Metricell!
         </span>
       </motion.div>
     </div>
